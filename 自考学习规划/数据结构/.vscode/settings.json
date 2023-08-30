@@ -1,0 +1,29 @@
+{
+    "files.associations": {
+        "__node_handle": "cpp",
+        "__hash_table": "cpp",
+        "__string": "c",
+        "cctype": "c",
+        "cstdio": "c",
+        "cstring": "c",
+        "cwchar": "c",
+        "ios": "c",
+        "istream": "c",
+        "iterator": "c",
+        "locale": "c",
+        "ostream": "c",
+        "sstream": "c",
+        "streambuf": "c",
+        "string": "c",
+        "string_view": "c",
+        "unordered_map": "c",
+        "vector": "c",
+        "cmath": "c",
+        "complex": "c",
+        "*.inc": "c",
+        "stdio.h": "c",
+        "2b.h": "c",
+        "2b_traverse.h": "c",
+        "b.h": "c"
+    }
+}
