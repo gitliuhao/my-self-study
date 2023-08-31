@@ -47,24 +47,23 @@ void Preorder1(BinTree bt){
 
 
 void Postorder1(BinTree bt){
-    SeqStack S; BinTnode * p;
+    SeqStack S; 
+    BinTnode * p, * q, *c;
+    q = bt;
     InitStack(&S);
     Push(&S, bt);
     while (!StackEmpty(&S))
     {
-        while (GetTop(&S))
-        {
-            Push(&S, GetTop(&S)->lchild);
+        c=GetTop(&S);
+        if(c->lchild !=NULL && c->lchild!=q && c->rchild!=q){
+            Push(&S, c->lchild);
         }
-        p=Pop(&S);
-        if(!StackEmpty(&S)){
-            if(GetTop(&S)->rchild){
-                Push(&S, GetTop(&S)->rchild);
-            }else{
-                p=Pop(&S);
-                printf("%c", p->data);
-                Push(&S, p->rchild);
-            }
+        else if(c->rchild != NULL && c->rchild!=q){
+            Push(&S, c->rchild);
+        }else{
+            printf("%c", c->data);
+            Pop(&S);
+            q=c;
         }
     }
     
